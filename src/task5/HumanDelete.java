@@ -19,6 +19,7 @@ public class HumanDelete {
         for (int i = 0; i < n; i++) {
             arrayList.add(createHuman());
         }
+
         linkedList.addAll(arrayList);
 
 
