@@ -1,9 +1,9 @@
 package task5;
 
-//В кругу стоят N человек, пронумерованных от 1 до N.
-// При ведении счета по кругу вычеркивается каждый второй человек, пока не останется один.
-// Составить две программы, моделирующие процесс.
-// Одна из программ должна использовать класс ArrayList, а вторая — LinkedList.
+//Р’ РєСЂСѓРіСѓ СЃС‚РѕСЏС‚ N С‡РµР»РѕРІРµРє, РїСЂРѕРЅСѓРјРµСЂРѕРІР°РЅРЅС‹С… РѕС‚ 1 РґРѕ N.
+// РџСЂРё РІРµРґРµРЅРёРё СЃС‡РµС‚Р° РїРѕ РєСЂСѓРіСѓ РІС‹С‡РµСЂРєРёРІР°РµС‚СЃСЏ РєР°Р¶РґС‹Р№ РІС‚РѕСЂРѕР№ С‡РµР»РѕРІРµРє, РїРѕРєР° РЅРµ РѕСЃС‚Р°РЅРµС‚СЃСЏ РѕРґРёРЅ.
+// РЎРѕСЃС‚Р°РІРёС‚СЊ РґРІРµ РїСЂРѕРіСЂР°РјРјС‹, РјРѕРґРµР»РёСЂСѓСЋС‰РёРµ РїСЂРѕС†РµСЃСЃ.
+// РћРґРЅР° РёР· РїСЂРѕРіСЂР°РјРј РґРѕР»Р¶РЅР° РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєР»Р°СЃСЃ ArrayList, Р° РІС‚РѕСЂР°СЏ вЂ” LinkedList.
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -43,14 +43,14 @@ public class HumanDelete {
     public static Human createHuman() {
         String[] arr = printMargins();
         while (arr.length != 3) {
-            System.out.println("Данные введены неверно, введите корректные данные!");
+            System.out.println("Р”Р°РЅРЅС‹Рµ РІРІРµРґРµРЅС‹ РЅРµРІРµСЂРЅРѕ, РІРІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ!");
             arr = printMargins();
         }
         try {
             int id = Integer.parseInt(arr[0]);
             int age = Integer.parseInt(arr[2]);
         } catch (NumberFormatException exc) {
-            System.out.println("Введите корректные данные!");
+            System.out.println("Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ!");
             arr = printMargins();
         }
         return new Human(Integer.parseInt(arr[0]), arr[1], Integer.parseInt(arr[2]));
@@ -58,7 +58,7 @@ public class HumanDelete {
 
     public static int printNumberHuman() {
         int number = 0;
-        System.out.println("Введите количество человек:");
+        System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡РµР»РѕРІРµРє:");
         BufferedReader bf=null;
         InputStreamReader inputStreamReader=null;
         try {
@@ -66,7 +66,7 @@ public class HumanDelete {
             bf = new BufferedReader(inputStreamReader);
             number = Integer.parseInt(bf.readLine());
         } catch (IOException exc) {
-            System.out.println("Ошибка ввода с клавиатуры.");
+            System.out.println("РћС€РёР±РєР° РІРІРѕРґР° СЃ РєР»Р°РІРёР°С‚СѓСЂС‹.");
         } finally {
             if (inputStreamReader != null) {
                 try {
@@ -83,7 +83,7 @@ public class HumanDelete {
     public static String[] printMargins() {
         String string = null;
         String[] arr = null;
-        System.out.println("Введите данные по человеку в формате: \"id, имя, возраст\": ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ РїРѕ С‡РµР»РѕРІРµРєСѓ РІ С„РѕСЂРјР°С‚Рµ: \"id, РёРјСЏ, РІРѕР·СЂР°СЃС‚\": ");
         BufferedReader reader=null;
         InputStreamReader inputStreamReader = null;
         try {

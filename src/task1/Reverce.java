@@ -1,6 +1,6 @@
 package task1;
 
-//Ввести строки из файла, записать в список. Вывести строки в файл в обратном порядке.
+//Р’РІРµСЃС‚Рё СЃС‚СЂРѕРєРё РёР· С„Р°Р№Р»Р°, Р·Р°РїРёСЃР°С‚СЊ РІ СЃРїРёСЃРѕРє. Р’С‹РІРµСЃС‚Рё СЃС‚СЂРѕРєРё РІ С„Р°Р№Р» РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ.
 
 import java.io.*;
 import java.util.ArrayList;
@@ -18,15 +18,15 @@ public class Reverce {
                 list.add(s);
             }
         } catch (IOException exc) {
-            System.out.println("Ошибка чтения файла." + exc);
+            System.out.println("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р°." + exc);
         }
 
-        System.out.println("Чтение из файла успешно.");
-        System.out.println("Вывод списка из файла:\n" + list);
+        System.out.println("Р§С‚РµРЅРёРµ РёР· С„Р°Р№Р»Р° СѓСЃРїРµС€РЅРѕ.");
+        System.out.println("Р’С‹РІРѕРґ СЃРїРёСЃРєР° РёР· С„Р°Р№Р»Р°:\n" + list);
 
         Collections.reverse(list);
 
-        System.out.println("Список в обратном порядке\n" + list);
+        System.out.println("РЎРїРёСЃРѕРє РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ\n" + list);
 
         try (FileWriter fw = new FileWriter("C:\\newFolder\\text2.txt")) {
             Iterator<String> it = list.iterator();
@@ -36,8 +36,8 @@ public class Reverce {
             }
 
         } catch (IOException exc) {
-            System.out.println("Ошибка записи файла.");
+            System.out.println("РћС€РёР±РєР° Р·Р°РїРёСЃРё С„Р°Р№Р»Р°.");
         }
-        System.out.println("Запись в файл успешна.");
+        System.out.println("Р—Р°РїРёСЃСЊ РІ С„Р°Р№Р» СѓСЃРїРµС€РЅР°.");
     }
 }

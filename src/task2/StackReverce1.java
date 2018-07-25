@@ -1,6 +1,6 @@
 package task2;
 
-//Ввести число, занести его цифры в стек. Вывести число, у которого цифры идут в обратном порядке.
+//Р’РІРµСЃС‚Рё С‡РёСЃР»Рѕ, Р·Р°РЅРµСЃС‚Рё РµРіРѕ С†РёС„СЂС‹ РІ СЃС‚РµРє. Р’С‹РІРµСЃС‚Рё С‡РёСЃР»Рѕ, Сѓ РєРѕС‚РѕСЂРѕРіРѕ С†РёС„СЂС‹ РёРґСѓС‚ РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ.
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class StackReverce1 {
             dq.add(ch[i]);
         }
 
-        System.out.println("Стек " + dq);
+        System.out.println("РЎС‚РµРє " + dq);
 
         char b;
         String bb = "";
@@ -25,17 +25,17 @@ public class StackReverce1 {
             b = dq.pollLast();
             bb = bb + b;
         }
-        System.out.println("Число в обратном порядке, с помощью стека: " + bb);
+        System.out.println("Р§РёСЃР»Рѕ РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ, СЃ РїРѕРјРѕС‰СЊСЋ СЃС‚РµРєР°: " + bb);
     }
 
     public static String print() {
-        System.out.println("Введите число:");
+        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:");
 
         String s = null;
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             s = reader.readLine();
         } catch (IOException exc) {
-            System.out.println("Ошибка ввода числа." + exc);
+            System.out.println("РћС€РёР±РєР° РІРІРѕРґР° С‡РёСЃР»Р°." + exc);
         }
         return s;
     }
